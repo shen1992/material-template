@@ -1,0 +1,19 @@
+{
+  "name": "basic-table",
+  "version": "1.0.3",
+  "description": "",
+  "main": "./src/index.tsx.ejs",
+  "scripts": {
+    "start": "build-scripts start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@alib/build-scripts": "^0.1.31",
+    "babel-plugin-import": "^1.13.3",
+    "build-plugin-block": "^1.2.2"
+  },
+  "dependencies": {
+    "antd": "^4.16.0"
+  }
+}
