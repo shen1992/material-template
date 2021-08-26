@@ -1,0 +1,50 @@
+import React from 'react'
+import {
+  Table,
+} from 'antd'
+
+interface Props {
+  list: [];
+  total: number;
+  setQuery: (params: any) => void;
+  query: {
+    page: number;
+    pageSize: number;
+  };
+}
+
+export default function BasicTable({
+  list,
+  total,
+  setQuery,
+  query = {
+    page: 1,
+    pageSize: 10
+  },
+}: Props) {
+  function handlePage(page: number, pageSize?: number) {
+    setQuery({
+      page,
+      pageSize: pageSize || 10
+    })
+  }
+
+  const columns = [<% tableSchema.forEach(function (data) { %>
+    {
+      title: '<%= data.title %>',
+      dataIndex: '<%= data.dataIndex %>'
+    },<% }) %>]
+
+  return (
+    <Table
+      columns={columns}
+      dataSource={list}
+      pagination={{
+        total,
+        showTotal: (num: number) => `总共${num}条数据`,
+        pageSize: query.pageSize,
+        onChange: handlePage
+      }}
+    />
+  )
+}
