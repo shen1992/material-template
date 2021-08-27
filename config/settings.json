@@ -4,31 +4,7 @@
   "schema": {
     "type": "object",
     "properties": {
-      "tableSchema": {
-        "title": "table配置",
-        "description": "配置table每一列",
-        "type": "array",
-        "widget": "list2",
-        "items": {
-          "type": "object",
-          "properties": {
-            "title": {
-              "title": "title名",
-              "type": "string",
-              "required": true
-            },
-            "dataIndex": {
-              "title": "配置dataIndex",
-              "type": "string",
-              "required": true
-            },
-            "formItem": {
-              "title": "是否搜索条件",
-              "type": "boolean"
-            }
-          }
-        }
-      }
+      
     }
   }
 }
