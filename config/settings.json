@@ -1,34 +1,10 @@
 {
-  "screenshot": "https://easyreadfs.nosdn.127.net/fle/a0df1d4009c7a2ec5fee/1622008692708/screenshot.jpg",
-  "type": "block",
+  "screenshot": "https://easyreadfs.nosdn.127.net/fle/a0df1d4009c7a2ec5fee/1623053426711/ccf2998fd4514bdb97603f9d0aba7b26_67e9b9c02e6a7249f34f71780e567881.jpg",
+  "type": "page",
   "schema": {
     "type": "object",
     "properties": {
-      "tableSchema": {
-        "title": "table配置",
-        "description": "配置table每一列",
-        "type": "array",
-        "widget": "list2",
-        "items": {
-          "type": "object",
-          "properties": {
-            "title": {
-              "title": "title名",
-              "type": "string",
-              "required": true
-            },
-            "dataIndex": {
-              "title": "配置dataIndex",
-              "type": "string",
-              "required": true
-            },
-            "formItem": {
-              "title": "是否搜索条件",
-              "type": "boolean"
-            }
-          }
-        }
-      }
+
     }
   }
 }

@@ -1,33 +1,13 @@
 import React from 'react'
 import {
+  Button,
   Table,
+  Space,
 } from 'antd'
+import FormRender, { useForm } from 'form-render';
 
-interface Props {
-  list: [];
-  total: number;
-  setQuery: (params: any) => void;
-  query: {
-    page: number;
-    pageSize: number;
-  };
-}
-
-export default function BasicTable({
-  list,
-  total,
-  setQuery,
-  query = {
-    page: 1,
-    pageSize: 10
-  },
-}: Props) {
-  function handlePage(page: number, pageSize?: number) {
-    setQuery({
-      page,
-      pageSize: pageSize || 10
-    })
-  }
+export default () => {
+  const form = useForm();
 
   const columns = [<% tableSchema.forEach(function (data) { %>
     {
@@ -35,16 +15,32 @@ export default function BasicTable({
       dataIndex: '<%= data.dataIndex %>'
     },<% }) %>]
 
+  const schema = <%- JSON.stringify(formSchema) %>
+
+  function handleSubmit(data: any) {
+
+  }
+
   return (
-    <Table
-      columns={columns}
-      dataSource={list}
-      pagination={{
-        total,
-        showTotal: (num: number) => `总共${num}条数据`,
-        pageSize: query.pageSize,
-        onChange: handlePage
-      }}
-    />
+    <Space
+      direction="vertical"
+      style={{ width: '100%' }}
+      size="large"
+    >
+      <header style={{ textAlign: "right" }}>
+        <FormRender
+          form={form}
+          schema={schema}
+          onFinish={handleSubmit}
+        />
+        <Button
+          type="primary"
+          onClick={form.submit}
+        >
+          搜索
+        </Button>
+      </header>
+      <Table columns={columns} />
+    </Space>
   )
 }
