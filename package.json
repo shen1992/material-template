@@ -1,6 +1,6 @@
 {
   "name": "basic-table",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "",
   "main": "./src/index.tsx.ejs",
   "scripts": {
@@ -11,12 +11,17 @@
   "devDependencies": {
     "@alib/build-scripts": "^0.1.31",
     "babel-plugin-import": "^1.13.3",
-    "build-plugin-block": "^1.2.2"
-  },
-  "dependencies": {
+    "build-plugin-block": "^1.2.2",
     "antd": "^4.16.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
-  "screenshot": "https://easyreadfs.nosdn.127.net/fle/a0df1d4009c7a2ec5fee/1623053426711/ccf2998fd4514bdb97603f9d0aba7b26_67e9b9c02e6a7249f34f71780e567881.jpg"
+  "peerDependencies": {
+    "antd": "^4.16.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "materialConfig": {
+    "bitExport": "lofter-material.blocks"
+  }
 }

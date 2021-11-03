@@ -1,10 +1,8 @@
 {
-  "screenshot": "https://easyreadfs.nosdn.127.net/fle/a0df1d4009c7a2ec5fee/1622008692708/screenshot.jpg",
+  "screenshot": "",
   "type": "block",
   "schema": {
     "type": "object",
-    "properties": {
-      
-    }
+    "properties": {}
   }
 }
